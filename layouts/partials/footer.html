@@ -13,9 +13,17 @@
     </div>
     {{- with site.Params.goatCounterCode }}
     <div class="footer-links">
-      <a href="https://{{ . }}.goatcounter.com/" rel="noopener noreferrer" target="_blank" title="Site visit stats">🔢</a>
+      <span id="goatcounter-visits"></span>
     </div>
     <script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script>
+        var goatcounterPoll = setInterval(function () {
+            if (window.goatcounter && window.goatcounter.visit_count) {
+                clearInterval(goatcounterPoll)
+                window.goatcounter.visit_count({ append: '#goatcounter-visits' })
+            }
+        }, 100)
+    </script>
     {{- end }}
   </div>
 </footer>
