@@ -13,8 +13,8 @@
     </div>
     {{- with site.Params.goatCounterCode }}
     <div class="footer-links">
-      <a class="goatcounter-badge" href="https://{{ . }}.goatcounter.com/" rel="noopener noreferrer" target="_blank" title="Site visit stats" style="display:inline-flex;align-items:center;gap:0.3em;font-size:inherit;line-height:inherit;text-decoration:none;">
-        <span aria-hidden="true">🔢</span>
+      <a class="goatcounter-badge" href="https://{{ . }}.goatcounter.com/" rel="noopener noreferrer" target="_blank" title="Site visit stats" style="display:inline-flex;align-items:center;gap:0.35em;font-size:inherit;line-height:inherit;text-decoration:none;">
+        <span aria-hidden="true">&bull;</span>
         <span id="goatcounter-count"></span>
       </a>
     </div>
@@ -24,7 +24,7 @@
            so its number can be neither restyled nor read. Fetch the counter
            endpoint directly and render just the digits. Site total first, the
            current page as a fallback; if neither answers, the badge stays as
-           the icon alone. */
+           the dot alone. */
         (function () {
             var base = 'https://{{ . }}.goatcounter.com/counter/';
             var el = document.getElementById('goatcounter-count');
@@ -44,7 +44,7 @@
                 .catch(function () {
                     grab(base + encodeURIComponent(location.pathname) + '.json')
                         .then(function (d) { show(d.count); })
-                        .catch(function () { /* counter unavailable: icon only */ });
+                        .catch(function () { /* counter unavailable: dot only */ });
                 });
         })();
     </script>
