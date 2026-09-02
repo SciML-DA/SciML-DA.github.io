@@ -11,5 +11,13 @@
       <a href="{{ site.Params.orcid }}">ORCID</a>
       <a href="{{ site.Params.personalSite }}">PI homepage</a>
     </div>
+    {{- with site.Params.goatCounterCode }}
+    <div class="footer-links">
+      <a href="https://{{ . }}.goatcounter.com/" rel="noopener noreferrer" target="_blank" title="Site visit stats">
+        <img src="https://{{ . }}.goatcounter.com/counter/TOTAL.svg" alt="site visits" loading="lazy" style="vertical-align:middle;height:1em;">
+      </a>
+    </div>
+    <script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    {{- end }}
   </div>
 </footer>
