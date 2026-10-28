@@ -26,6 +26,12 @@ current:
       scholar: "https://scholar.google.com/citations?user=wUmO9q8AAAAJ&hl=en"
       orcid: "https://orcid.org/0009-0009-8594-082X"
 
+  - name: "Mingyang Gao"
+    role: "PhD student"
+    since: "2026"
+    affiliation: "Aeronautics, Imperial College London"
+    cosupervisor: "Luca Magri (main)"
+
 alumni:
   - name: "Lukas Campbell"
     role: "UROP student"

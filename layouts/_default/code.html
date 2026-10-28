@@ -5,23 +5,6 @@
   {{ with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
   <div class="prose">{{ .Content }}</div>
 
-  <div class="org-cards">
-    {{- range $data.orgs }}
-    <a class="org-card" href="{{ .url }}">
-      <span class="org-handle">{{ .name }}</span>
-      <span class="org-blurb">{{ .blurb }}</span>
-      <span class="org-cta">github.com/{{ .name }} &rarr;</span>
-    </a>
-    {{- end }}
-    {{- with $data.zenodo }}
-    <a class="org-card" href="{{ .url }}">
-      <span class="org-handle">{{ .name }}</span>
-      <span class="org-blurb">{{ .blurb }}</span>
-      <span class="org-cta">All datasets &rarr;</span>
-    </a>
-    {{- end }}
-  </div>
-
   {{- with $data.repos }}
   <h2 class="group-heading" id="software">Software</h2>
   <ul class="repos">

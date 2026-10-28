@@ -50,10 +50,10 @@ repos:
     figure: "img/code/qlroms.png"
     invertDark: true
     org: andreanovoa
-    url: "https://andreanovoa.github.io/qlroms/"
-    docs: "https://andreanovoa.github.io/qlroms/"
+    url: "https://andreanovoa.github.io/qlroms-docs/"
+    docs: "https://andreanovoa.github.io/qlroms-docs/"
     license: "MIT"
-    description: "Quantized-local reduced-order models: the state space is partitioned into charts by k-means, each chart gets its own local POD basis, and an exact shared atlas stitches them into one global coordinate system, with the local dynamics advanced by an intrusive Galerkin projection. Includes a live KS-1D demo."
+    description: "Quantized-local reduced-order models: the state space is partitioned into charts by k-means, each chart gets its own local POD basis, and an exact shared atlas stitches them into one global coordinate system, with the local dynamics advanced by an intrusive Galerkin projection. Includes live demos on a travelling wave of the 2-D Kuramoto–Sivashinsky equation and on the chaotic 1-D case."
 
   - name: "dynamodels"
     figure: "img/code/lorenz63.png"
