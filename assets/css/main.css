@@ -897,3 +897,8 @@ body[data-topic] .page--narrow { max-width: 46rem; }
 :root.dark .invert-dark {
   filter: invert(1) hue-rotate(180deg);
 }
+
+/* Join page: one card per open position (data/openings.yml). */
+.opening { max-width: 44rem; margin: 0 0 1.25rem; }
+.opening h2 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+.opening .opening-meta { font-size: 0.9rem; }
